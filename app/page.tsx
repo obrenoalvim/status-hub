@@ -115,6 +115,10 @@ export default function DashboardPage() {
             Choose services
           </Link>
         </div>
+      ) : results.length === 0 ? (
+        <div className="rounded-lg border border-dashed border-[var(--border)] p-12 text-center text-[var(--fg-dim)]">
+          Checking {selected.length} service(s)...
+        </div>
       ) : (
         <>
           <div

@@ -25,16 +25,25 @@
   --font-sans: var(--font-plex-sans);
 }
 
-* {
-  border-color: var(--border);
-}
+/*
+ * `@import "tailwindcss"` wraps Tailwind's own rules in cascade layers
+ * (theme, base, components, utilities). Anything declared outside a layer
+ * sits unlayered and unconditionally beats every layered rule — including
+ * `hover:` / state utilities — regardless of specificity. Everything below
+ * must stay inside a layer so Tailwind utilities can still override it.
+ */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
 
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
-  position: relative;
-  min-height: 100%;
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+    position: relative;
+    min-height: 100%;
+  }
 }
 
 /* Grain + scanline + grid texture, layered behind all content */
@@ -78,8 +87,10 @@ body::after {
   z-index: 1;
 }
 
-.led {
-  display: inline-block;
-  border-radius: 9999px;
-  box-shadow: 0 0 8px 1px var(--dot-color, var(--led-unknown));
+@layer components {
+  .led {
+    display: inline-block;
+    border-radius: 9999px;
+    box-shadow: 0 0 8px 1px var(--dot-color, var(--led-unknown));
+  }
 }

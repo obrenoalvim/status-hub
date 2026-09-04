@@ -24,6 +24,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${plexMono.variable} ${plexSans.variable} h-full antialiased`}
+      // Browser extensions (translators, etc.) inject attributes into <html>
+      // before hydration; that's not a real mismatch, so silence the warning.
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <div id="app-root" className="flex flex-1 flex-col">

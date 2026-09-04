@@ -1,27 +1,34 @@
 import { StatusResult } from "@/lib/normalize";
+import ServiceIcon from "./ServiceIcon";
 
-const DOT_COLOR: Record<StatusResult["indicator"], string> = {
-  operational: "bg-emerald-500",
-  minor: "bg-yellow-500",
-  major: "bg-orange-500",
-  critical: "bg-red-500",
-  maintenance: "bg-blue-500",
-  unknown: "bg-gray-400",
+const LED_VAR: Record<StatusResult["indicator"], string> = {
+  operational: "var(--led-operational)",
+  minor: "var(--led-minor)",
+  major: "var(--led-major)",
+  critical: "var(--led-critical)",
+  maintenance: "var(--led-maintenance)",
+  unknown: "var(--led-unknown)",
 };
 
-export default function StatusCard({ status }: { status: StatusResult }) {
+export default function StatusCard({ status, icon }: { status: StatusResult; icon: string }) {
   return (
     <a
       href={status.url}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center justify-between gap-3 rounded-lg border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900 px-4 py-3 hover:border-black/20 dark:hover:border-white/20 transition-colors"
+      className="group flex items-center gap-3 rounded-md border border-[var(--border)] bg-[var(--panel)] px-4 py-3 transition-colors hover:border-[var(--accent)]/40 hover:bg-[var(--panel-2)]"
     >
-      <div className="min-w-0">
-        <p className="font-medium truncate">{status.name}</p>
-        <p className="text-sm text-neutral-500 truncate">{status.description}</p>
+      <ServiceIcon slug={icon} name={status.name} />
+      <div className="min-w-0 flex-1">
+        <p className="truncate font-[family-name:var(--font-plex-mono)] text-sm font-medium tracking-tight">
+          {status.name}
+        </p>
+        <p className="truncate text-xs text-[var(--fg-dim)]">{status.description}</p>
       </div>
-      <span className={`h-3 w-3 shrink-0 rounded-full ${DOT_COLOR[status.indicator]}`} />
+      <span
+        className="led h-2.5 w-2.5 shrink-0"
+        style={{ "--dot-color": LED_VAR[status.indicator], background: LED_VAR[status.indicator] } as React.CSSProperties}
+      />
     </a>
   );
 }

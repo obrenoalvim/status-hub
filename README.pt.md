@@ -39,6 +39,12 @@ npm run dev
 Abra [http://localhost:3000](http://localhost:3000). Sem nada selecionado ainda, você cai
 na tela de escolha em `/select`.
 
+## Variáveis de ambiente
+
+`NEXT_PUBLIC_SITE_URL`: a origem real do deploy, usada pra montar URLs absolutas em
+metadata, sitemap, `robots.txt`, imagem OG, JSON-LD e `llms.txt` (ver `lib/site.ts`).
+Opcional; usa `https://status-hub.vercel.app` como padrão se não definida.
+
 ## Scripts
 
 ```bash

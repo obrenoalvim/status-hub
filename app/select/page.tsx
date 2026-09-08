@@ -73,6 +73,7 @@ export default function SelectPage() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search by name or category..."
+        aria-label="Search services by name or category"
         className="mb-4 w-full rounded-md border border-[var(--border)] bg-[var(--panel)] px-3 py-2.5 text-sm text-[var(--fg)] outline-none placeholder:text-[var(--fg-dim)] focus:border-[var(--accent)]/50"
       />
 

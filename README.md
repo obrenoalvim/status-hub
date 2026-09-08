@@ -39,6 +39,12 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000). With nothing selected yet, you'll land
 on the picker at `/select`.
 
+## Environment variables
+
+`NEXT_PUBLIC_SITE_URL`: the real deployed origin, used to build absolute URLs for
+metadata, the sitemap, `robots.txt`, the OG image, JSON-LD, and `llms.txt` (see
+`lib/site.ts`). Optional; falls back to `https://status-hub.vercel.app` if unset.
+
 ## Scripts
 
 ```bash

@@ -2,6 +2,8 @@
 
 # Status Hub
 
+[![CI](https://github.com/obrenoalvim/status-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/obrenoalvim/status-hub/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 O GitHub caiu, ou é só você? O Status Hub junta toda página de status que você confere num grid só: GitHub, Cloudflare, OpenAI, Discord e mais de 50 outros, atualizado sozinho.
 
 Escolha os serviços que te interessam uma vez; a seleção fica salva no `localStorage`, então

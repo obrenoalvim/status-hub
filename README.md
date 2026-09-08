@@ -2,6 +2,8 @@ English | [Português](README.pt.md)
 
 # Status Hub
 
+[![CI](https://github.com/obrenoalvim/status-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/obrenoalvim/status-hub/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Is GitHub down, or is it just you? Status Hub puts every status page you check into one grid: GitHub, Cloudflare, OpenAI, Discord, and 50+ others, refreshed automatically.
 
 Pick the services you care about once; the selection is saved to `localStorage` so the

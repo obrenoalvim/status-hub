@@ -1,10 +1,12 @@
 # Status Hub
 
 A single dashboard for every service status page you track — GitHub, Cloudflare, OpenAI,
-Discord, and 30+ others in one grid, refreshed automatically.
+Discord, and 50+ others in one grid, refreshed automatically.
 
 Pick the services you care about once; the selection is saved to `localStorage` so the
 dashboard remembers you on the next visit. No account, no backend database.
+
+![Status Hub dashboard](docs/screenshot.jpg)
 
 ## How it works
 

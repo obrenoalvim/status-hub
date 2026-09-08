@@ -32,6 +32,7 @@ export default function ServiceIcon({ slug, name }: { slug: string; name: string
       alt=""
       width={20}
       height={20}
+      loading="lazy"
       className="h-8 w-8 shrink-0 rounded bg-[var(--panel-2)] p-1.5"
       onError={() => setFailed(true)}
     />

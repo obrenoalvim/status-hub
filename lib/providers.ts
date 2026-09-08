@@ -66,6 +66,11 @@ export const PROVIDERS: Provider[] = [
   { id: "grammarly", name: "Grammarly", category: "Apps", type: "statuspage", baseUrl: "https://status.grammarly.com", icon: "grammarly" },
   { id: "medium", name: "Medium", category: "Apps", type: "statuspage", baseUrl: "https://status.medium.com", icon: "medium" },
   { id: "robinhood", name: "Robinhood", category: "Apps", type: "statuspage", baseUrl: "https://status.robinhood.com", icon: "robinhood" },
+  { id: "pinterest", name: "Pinterest", category: "Social", type: "statuspage", baseUrl: "https://status.pinterest.com", icon: "pinterest" },
+  { id: "duolingo", name: "Duolingo", category: "Apps", type: "statuspage", baseUrl: "https://status.duolingo.com", icon: "duolingo" },
+  { id: "strava", name: "Strava", category: "Apps", type: "statuspage", baseUrl: "https://status.strava.com", icon: "strava" },
+  { id: "dailymotion", name: "Dailymotion", category: "Media", type: "statuspage", baseUrl: "https://status.dailymotion.com", icon: "dailymotion" },
+  { id: "vimeo", name: "Vimeo", category: "Media", type: "statuspage", baseUrl: "https://status.vimeo.com", icon: "vimeo" },
 ];
 
 export function getProvider(id: string): Provider | undefined {

@@ -5,7 +5,7 @@ export function GET() {
 
 > ${SITE_DESCRIPTION}
 
-Status Hub polls each provider's public Statuspage.io (or equivalent) JSON status endpoint through a server-side proxy, normalizes the response into one shape, and refreshes the dashboard automatically every 12 seconds. Built for developers who track multiple vendor status pages and want one page instead of a dozen browser tabs. No account, no backend database — the selection of tracked services is saved to the visitor's browser only.
+Status Hub polls each provider's public Statuspage.io (or equivalent) JSON status endpoint through a server-side proxy, normalizes the response into one shape, and refreshes the dashboard automatically every 12 seconds. Built for developers who track multiple vendor status pages and want one page instead of a dozen browser tabs. No account, no backend database: the selection of tracked services is saved to the visitor's browser only.
 
 ## Pages
 

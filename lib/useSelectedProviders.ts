@@ -25,8 +25,10 @@ function readSelected(): string[] {
   return cachedValue;
 }
 
+const EMPTY_SELECTION: string[] = [];
+
 function getServerSnapshot(): string[] {
-  return [];
+  return EMPTY_SELECTION;
 }
 
 function subscribe(callback: () => void) {
